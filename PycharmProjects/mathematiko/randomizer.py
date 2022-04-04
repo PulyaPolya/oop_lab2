@@ -1,18 +1,21 @@
-from random import randint
 import random
 
-class Random():
+
+class Random:
     def __init__(self):
         self.dict = {}
-        for i in range (1, 14):
+        for i in range(1, 14):
             self.dict[i] = 0
-        self.number = self.get_random_numbet()
+        self.number = self.get_random_number()
         self.wait_for_random_numb = False
-    def get_random_numbet(self):
+        self.previous_number = -1
+
+    def get_random_number(self):
         number = random.randint(1, 13)
         while self.dict[number] >= 4:
             number = random.randint(1, 13)
-        self.dict[number] += 3
+        self.dict[number] += 1
         self.number = number
         return number
+
 

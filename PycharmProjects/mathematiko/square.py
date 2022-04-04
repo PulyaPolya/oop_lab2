@@ -1,7 +1,7 @@
 import pygame
 
 
-class Square():
+class Square:
     def __init__(self, screen, a, b):
         self.screen = screen
         self.image = pygame.image.load('images/squaree.png')
